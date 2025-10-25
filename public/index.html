@@ -3,67 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linku API Gateway</title>
+    <title>Linku - Payment & Meeting Platform</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: white;
         }
-        .container {
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
         }
-        .subtitle {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            opacity: 0.9;
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
-        .status {
-            display: inline-block;
-            background: rgba(46, 204, 113, 0.2);
-            color: #2ecc71;
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: 1px solid rgba(46, 204, 113, 0.3);
-            font-weight: bold;
-        }
-        .info {
-            margin-top: 40px;
-            font-size: 0.9em;
+
+        .feature-desc {
+            font-size: 0.9rem;
             opacity: 0.8;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .aldemi-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .aldemi-link:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 3rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 Linku API Gateway</h1>
-        <div class="subtitle">Microservices API Gateway & Router</div>
-        <div class="status">✅ Service Active</div>
-        <div class="info">
-            This gateway routes API requests to the appropriate microservices.<br>
-            All endpoints are available under <code>/api/v1/</code> namespace.
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="logo">Linku</h1>
+            <p class="tagline">Unified Payment & Meeting Platform</p>
+            <p class="description">
+                Streamline your business operations with integrated payment processing 
+                and seamless meeting management solutions.
+            </p>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">💳</div>
+                    <div class="feature-title">Payments</div>
+                    <div class="feature-desc">Multi-provider payment processing</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📹</div>
+                    <div class="feature-title">Meetings</div>
+                    <div class="feature-desc">Google Meet integration</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔗</div>
+                    <div class="feature-title">API First</div>
+                    <div class="feature-desc">Developer-friendly REST API</div>
+                </div>
+            </div>
         </div>
-        <footer style="margin-top: 40px; font-size: 0.8em; opacity: 0.6;">
-            Aldemi Tech © 2025
-        </footer>
     </div>
+
+    <footer class="footer">
+        <p>
+            Developed by <a href="https://aldemi.tech" class="aldemi-link" target="_blank">Aldemi Tech</a> © 2025
+        </p>
+    </footer>
 </body>
 </html>
