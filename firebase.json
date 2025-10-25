@@ -1,10 +1,64 @@
 {
-  "functions": {
-    "source": ".",
-    "predeploy": [
-      "npm run lint",
-      "npm run build"
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ],
-    "runtime": "nodejs20"
+    "rewrites": [
+      {
+        "source": "/api/v1/meet/create-meeting",
+        "function": "meetCreateMeeting"
+      },
+      {
+        "source": "/api/v1/meet/list-meetings",
+        "function": "meetListMeetings"
+      },
+      {
+        "source": "/api/v1/meet/update-meeting",
+        "function": "meetUpdateMeeting"
+      },
+      {
+        "source": "/api/v1/meet/delete-meeting",
+        "function": "meetDeleteMeeting"
+      },
+      {
+        "source": "/api/v1/meet/generate-join-link",
+        "function": "meetGenerateJoinLink"
+      },
+      {
+        "source": "/api/v1/payment/tokenize-card-direct",
+        "function": "paymentTokenizeCardDirect"
+      },
+      {
+        "source": "/api/v1/payment/create-tokenization-session",
+        "function": "paymentCreateTokenizationSession"
+      },
+      {
+        "source": "/api/v1/payment/complete-tokenization",
+        "function": "paymentCompleteTokenization"
+      },
+      {
+        "source": "/api/v1/payment/process-payment",
+        "function": "paymentProcessPayment"
+      },
+      {
+        "source": "/api/v1/payment/refund-payment",
+        "function": "paymentRefundPayment"
+      },
+      {
+        "source": "/api/v1/payment/get-execution-location",
+        "function": "paymentGetExecutionLocation"
+      },
+      {
+        "source": "/api/v1/payment/webhook",
+        "function": "paymentWebhook"
+      },
+      {
+        "source": "/api/v1/payment/get-available-providers",
+        "function": "paymentGetAvailableProviders"
+      }
+    ]
   }
 }

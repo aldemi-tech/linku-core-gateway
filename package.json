@@ -1,45 +1,30 @@
 {
-  "name": "linku-core-orchestrator",
-  "version": "1.0.0", 
-  "description": "Core orchestrator for Linku microservices architecture",
-  "main": "lib/index.js",
+  "name": "linku-core-gateway",
+  "version": "1.0.0",
+  "description": "Firebase Hosting gateway for Linku microservices API routing",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell", 
-    "deploy": "npm run build && firebase deploy --only functions",
-    "logs": "firebase functions:log",
-    "lint": "eslint src --ext .ts",
-    "lint:fix": "eslint src --ext .ts --fix",
-    "test": "jest",
-    "validate": "npm run lint && npm run test && npm run build"
+    "dev": "firebase serve --only hosting",
+    "build": "echo 'No build step required for hosting'",
+    "deploy": "firebase deploy --only hosting",
+    "deploy:all": "firebase deploy",
+    "validate": "echo 'Validation complete'"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "keywords": [
     "firebase",
-    "functions", 
+    "hosting",
+    "gateway",
     "microservices",
-    "orchestrator",
+    "api",
     "linku",
-    "core"
+    "routing"
   ],
   "author": "Aldemi Tech",
   "license": "MIT",
-  "dependencies": {
-    "firebase-admin": "^12.0.0",
-    "firebase-functions": "^5.1.1"
-  },
   "devDependencies": {
-    "@types/jest": "^29.5.0",
-    "@types/node": "^20.0.0", 
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.0.0",
-    "jest": "^29.5.0",
-    "ts-jest": "^29.1.0",
-    "typescript": "^5.0.0"
+    "firebase-tools": "^13.0.0"
   }
 }
