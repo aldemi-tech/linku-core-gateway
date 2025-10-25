@@ -9,55 +9,94 @@
     "rewrites": [
       {
         "source": "/api/v1/meet/create-meeting",
-        "function": "meetCreateMeeting"
+        "function": {
+          "functionId": "meetCreateMeeting",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/meet/list-meetings",
-        "function": "meetListMeetings"
+        "function": {
+          "functionId": "meetListMeetings",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/meet/update-meeting",
-        "function": "meetUpdateMeeting"
+        "function": {
+          "functionId": "meetUpdateMeeting",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/meet/delete-meeting",
-        "function": "meetDeleteMeeting"
+        "function": {
+          "functionId": "meetDeleteMeeting",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/meet/generate-join-link",
-        "function": "meetGenerateJoinLink"
+        "function": {
+          "functionId": "meetGenerateJoinLink",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/payment/tokenize-card-direct",
-        "function": "paymentTokenizeCardDirect"
+        "function": {
+          "functionId": "paymentTokenizeCardDirect",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/payment/create-tokenization-session",
-        "function": "paymentCreateTokenizationSession"
+        "function": {
+          "functionId": "paymentCreateTokenizationSession",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/payment/complete-tokenization",
-        "function": "paymentCompleteTokenization"
+        "function": {
+          "functionId": "paymentCompleteTokenization",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/payment/process-payment",
-        "function": "paymentProcessPayment"
+        "function": {
+          "functionId": "paymentProcessPayment",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/payment/refund-payment",
-        "function": "paymentRefundPayment"
+        "function": {
+          "functionId": "paymentRefundPayment",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/payment/get-execution-location",
-        "function": "paymentGetExecutionLocation"
+        "function": {
+          "functionId": "paymentGetExecutionLocation",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/payment/webhook",
-        "function": "paymentWebhook"
+        "function": {
+          "functionId": "paymentWebhook",
+          "region": "us-central1"
+        }
       },
       {
         "source": "/api/v1/payment/get-available-providers",
-        "function": "paymentGetAvailableProviders"
+        "function": {
+          "functionId": "paymentGetAvailableProviders",
+          "region": "us-central1"
+        }
       }
     ]
   }
