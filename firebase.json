@@ -108,7 +108,7 @@
       {
         "source": "/api/v1/payment/webhook/mercadopago",
         "function": {
-          "functionId": "paymentWebhookMercadopago",
+          "functionId": "paymentWebhookMercadoPago",
           "region": "us-central1"
         }
       },
