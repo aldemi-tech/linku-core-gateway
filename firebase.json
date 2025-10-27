@@ -64,6 +64,13 @@
         }
       },
       {
+        "source": "/api/v1/payment/complete-tokenization/transbank",
+        "function": {
+          "functionId": "paymentCompleteTokenizationTransbank",
+          "region": "us-central1"
+        }
+      },
+      {
         "source": "/api/v1/payment/process-payment",
         "function": {
           "functionId": "paymentProcessPayment",
@@ -85,9 +92,23 @@
         }
       },
       {
-        "source": "/api/v1/payment/webhook",
+        "source": "/api/v1/payment/webhook/transbank",
         "function": {
-          "functionId": "paymentWebhook",
+          "functionId": "paymentWebhookTransbank",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/api/v1/payment/webhook/stripe",
+        "function": {
+          "functionId": "paymentWebhookStripe",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/api/v1/payment/webhook/mercadopago",
+        "function": {
+          "functionId": "paymentWebhookMercadopago",
           "region": "us-central1"
         }
       },
