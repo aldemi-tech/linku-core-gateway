@@ -118,7 +118,14 @@
           "functionId": "paymentGetAvailableProviders",
           "region": "us-central1"
         }
-      }
+      },
+      {
+        "source": "/api/v1/notification/send-push",
+        "function": {
+          "functionId": "notificationSendPush",
+          "region": "us-central1"
+        }
+      },
     ]
   }
 }
